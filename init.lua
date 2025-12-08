@@ -94,12 +94,15 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 
 -- Transparent Gruvbox Material
--- vim.g.gruvbox_material_transparent_background = 2
+vim.g.gruvbox_material_transparent_background = 0
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+
+-- Enable termguicolors for better colorschemes
+vim.o.termguicolors = true
 
 -- Make line numbers default
 vim.o.number = true
@@ -966,6 +969,11 @@ require('lazy').setup({
       -- Override MatchParen highlight to make matching brackets more visible
       vim.api.nvim_set_hl(0, 'MatchParen', { bg = '#fabd2f', fg = '#282828', bold = true })
     end,
+  },
+
+  -- GitHub Copilot
+  {
+    'github/copilot.vim',
   },
 
   -- Highlight todo, notes, etc in comments
