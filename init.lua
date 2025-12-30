@@ -989,6 +989,11 @@ require('lazy').setup({
           syntax = 'markdown',
           ext = 'md',
         },
+        {
+          path = '~/git/keybase/cvschmidt/vimwiki',
+          syntax = 'markdown',
+          ext = 'md',
+        },
       }
     end,
   },
